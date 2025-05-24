@@ -47,20 +47,14 @@ Docker (opcional)
 Configuração
 Clone este repositório:
 
-bash
-Copiar
-Editar
 git clone https://github.com/seuusuario/alma-backend.git
 cd alma-backend
+
 Configure o banco de dados PostgreSQL:
-
 Crie o banco alma_bd
-
 Configure as credenciais no arquivo src/main/resources/application.properties:
 
-properties
-Copiar
-Editar
+properties:
 spring.datasource.url=jdbc:postgresql://localhost:5432/alma_bd
 spring.datasource.username=seu_usuario
 spring.datasource.password=sua_senha
@@ -68,16 +62,8 @@ Execute as migrações do banco com Flyway (automaticamente no start do app).
 
 Como rodar
 Via Maven:
-
-bash
-Copiar
-Editar
 mvn spring-boot:run
 Ou compile e execute o JAR:
-
-bash
-Copiar
-Editar
 mvn clean package
 java -jar target/alma-backend-0.0.1-SNAPSHOT.jar
 Endpoints principais
